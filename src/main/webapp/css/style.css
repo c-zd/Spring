@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/*------------------------------*/
+/*          F01-1 home          */
+/*------------------------------*/
+
+/*ボタン要素*/
+/*--------------------*/
+.btn {
+    text-align: right;
+}
+
+/*ヘッダー*/
+/*--------------------*/
+header h1 {
+    width: auto;
+    height: 150px;
+    text-align: center;
+    padding-top: 90px;
+    background-size: cover;
+    background-image: url("https://placehold.jp/600×600/png");
+}
+
+/*メイン要素*/
+/*--------------------*/
+.list {
+    list-style-type: none;
+    text-align: center;
+}
+
+.list li {
+    line-height: 2;
+}
+
+/*------------------------------*/
+/*        F01-2 details         */
+/*------------------------------*/
+.return {
+    padding-left: 550px;
+    text-decoration: underline;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.getinfo {
+    padding: 10px;
+}
+
+.getinfo p {
+    font-weight: bold;
+}
+
+.photo {
+    padding: 10px;
+}
+
+/*--------------------register--------------------*/
+
+/*------------------------------*/
+/*     F03-2 admin/register     */
+/*------------------------------*/
+
+/*表記例*/
+/*------------------------------*/
+
+/*ファイルを選択ボタンを押すとつながる場所はどう書くんだ？*/
+.input-img {
+    border: solid 10px #000;
+}
+
+/*------------------------------*/
+/*     F03-3 admin/details     */
+/*------------------------------*/
+
+.edit {
+    padding-left: 550px;
+}
+
+/*------------------------------*/
+/*     F03-4 admin/edit     */
+/*------------------------------*/
+
+.update {
+    padding-left: 550px;
+}
