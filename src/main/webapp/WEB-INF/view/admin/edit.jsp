@@ -9,7 +9,8 @@
 </head>
 <body>
     <aside class="update">
-        <button>更新する</button>
+    	<!-- 更新しました！の小ウィンドウが出てログイン後のhomeに戻る -->
+        <button onclick="location.href='http://localhost:8080/Spring/admin/list'">更新する</button>
     </aside>
 
     <div class="flex-container">

@@ -9,7 +9,8 @@
 </head>
 <body>
         <aside class="register">
-            <button class="btn">登録する</button>
+        <!-- 登録しました！の小さいウィンドウが出てhomeに戻る -->
+            <button class="btn" onclick="location.href='http://localhost:8080/Spring/home'">登録する</button>
         </aside>
 
         <div class="flex-container">

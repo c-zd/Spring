@@ -23,7 +23,7 @@
                 <option value="okinawa">沖縄</option>
             </select>
             <!--ログアウトしますか？の確認を入れる。okなら/home.htmlに遷移する-->
-            <a href="">ログアウト</a>
+            <a href="/Spring/home">ログアウト</a>
         </aside>
 
     <header>

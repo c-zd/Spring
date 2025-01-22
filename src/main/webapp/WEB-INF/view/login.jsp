@@ -14,7 +14,7 @@
     <p>パスワード</p>
     <input type="password">
     <p><input type="submit" value="ログイン"></p>
-    <a href="home.html">戻る</a>
+    <a href="/home">戻る</a>
 
 </body>
 </html>

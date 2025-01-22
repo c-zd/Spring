@@ -9,7 +9,7 @@
 </head>
 <body>
     <aside class="edit">
-        <button>編集する</button>
+        <button onclick="location.href='http://localhost:8080/Spring/admin/list'">編集する</button>
     </aside>
 
     <div class="flex-container">

@@ -9,7 +9,7 @@
 </head>
 <body>
     <aside class="return">
-        <a href="home.html">戻る</a>
+        <a href="/Spring/home">戻る</a>
     </aside>
 
     <div class="flex-container">

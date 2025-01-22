@@ -21,7 +21,7 @@
                 <option value="kyusyu">九州</option>
                 <option value="okinawa">沖縄</option>
             </select>
-            <button type="button" class="login" onclick="location.href='login.html'">ログイン</button>
+            <button type="button" class="login" onclick="location.href='http://localhost:8080/Spring/login'">ログイン</button>
         </aside>
 
     <header>
