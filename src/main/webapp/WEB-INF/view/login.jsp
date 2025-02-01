@@ -9,12 +9,13 @@
 </head>
 <body>
     <h1>温泉探訪システム</h1>
-    <p>ログインID</p>
-    <input type="text" name="loginId">
-    <p>パスワード</p>
-    <input type="password" name="password">
-    <p><input type="submit" value="ログイン"></p>
-    <a href="/home">戻る</a>
-
+		<form action="" method="post">
+		    <p>ログインID</p>
+		    <input type="text" name="loginId" value="${member.loginId }">
+		    <p>パスワード</p>
+		    <input type="password" name="password" value="${member.password }">
+		    <p><input type="submit" value="ログイン"></p>
+		</form>
+    <a href="home">戻る</a>
 </body>
 </html>
