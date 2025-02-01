@@ -7,6 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import domain.Member;
 
 /**
  * Servlet implementation class LoginServlet
@@ -20,12 +23,25 @@ public class LoginServlet extends HttpServlet {
 		//フォワード
 		request.getRequestDispatcher("WEB-INF/view/login.jsp")
 				.forward(request, response);
-		
-		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		//文字化け防止
+		request.setCharacterEncoding("UTF-8");
+		
+		//入力値取得
+		String loginId = request.getParameter("loginId");
+		String password = request.getParameter("password");
+		
+		//Memberオブジェクトにまとめる
+		Member member = new Member(loginId, password);
+		
+		//セッションに格納
+		HttpSession session = request.getSession();
+		session.setAttribute("member", member);
+		
+		//確認ページへリダイレクト
+		response.sendRedirect("registerConf");
 	}
 
 }
