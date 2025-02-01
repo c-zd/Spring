@@ -43,11 +43,58 @@ public class RegisterConfServlet extends HttpServlet {
 		System.out.println("ログインID：" + member.getLoginId());
 		System.out.println("パスワード：" + member.getPassword());
 		
-		//セッションの内容が不要になったので破棄する
-		session.invalidate();
+		//ログインIDの確認(入力値はtaro)
+		String idErrorMessage = null;
+		boolean isCorrectId = true;
 		
-		//完了ページ(/admin/list)へ遷移
-		response.sendRedirect("admin/list");
+		if(member.getLoginId().isBlank()) {
+			isCorrectId = false;
+			idErrorMessage = "ログインIDが未入力です";
+		} else if(!member.getLoginId().equals("taro")) {
+			isCorrectId = false;
+			idErrorMessage = "ログインIDが違います";
+		}
+		
+		if(!isCorrectId) {
+			//ログインIDが不正な場合
+			request.setAttribute("message", idErrorMessage);
+			request.getRequestDispatcher("/WEB-INF/view/login.jsp")
+				.forward(request, response);
+		} else {
+			//ログインIDが正しい場合
+			session.setAttribute("loginId", true);
+		}
+		
+		//パスワードの確認(入力値はpass)
+		String passwordErrorMessage = null;
+		boolean isCorrectPassword = true;
+		
+		if(member.getPassword().isBlank()) {
+			isCorrectPassword = false;
+			passwordErrorMessage = "パスワードが未入力です";
+		} else if(!member.getPassword().equals("pass")) {
+			isCorrectPassword = false;
+			passwordErrorMessage = "パスワードが違います";
+		}
+		
+		if(!isCorrectPassword) {
+			//パスワードが不正な場合
+			request.setAttribute("message", passwordErrorMessage);
+			request.getRequestDispatcher("/WEB-INF/view/login.jsp")
+				.forward(request, response);
+		} else {
+			//パスワードが正しい場合
+			session.setAttribute("password", true);
+		}
+		
+		//ログインIDとパスワード両方が正しかった時にログイン後の画面(admin/list)に遷移する
+		boolean correctId = (boolean) session.getAttribute("loginId");
+		boolean correctPassword = (boolean) session.getAttribute("password");
+		if(correctId && correctPassword) {
+			response.sendRedirect("admin/list");
+		}
+	
+		
 	}
 
 }
