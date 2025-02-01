@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>温泉探訪システム</h1>
+    <p>${message}</p>
 		<form action="" method="post">
 		    <p>ログインID</p>
 		    <input type="text" name="loginId" value="${member.loginId }">
