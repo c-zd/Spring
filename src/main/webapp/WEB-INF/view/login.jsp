@@ -10,9 +10,9 @@
 <body>
     <h1>温泉探訪システム</h1>
     <p>ログインID</p>
-    <input type="text">
+    <input type="text" name="loginId">
     <p>パスワード</p>
-    <input type="password">
+    <input type="password" name="password">
     <p><input type="submit" value="ログイン"></p>
     <a href="/home">戻る</a>
 
