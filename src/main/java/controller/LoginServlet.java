@@ -32,6 +32,8 @@ public class LoginServlet extends HttpServlet {
 		//入力値取得
 		String loginId = request.getParameter("loginId");
 		String password = request.getParameter("password");
+		//System.out.println(loginId);
+		//System.out.println(password);
 		
 		//Memberオブジェクトにまとめる
 		Member member = new Member(loginId, password);
